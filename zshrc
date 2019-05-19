@@ -22,9 +22,10 @@ plugins=(
 export ZSH=/home/ben/.oh-my-zsh
 
 # python-virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # ZSH Theme
 ZSH_THEME="spaceship"
