@@ -20,6 +20,7 @@ plugins=(
 
 # oh-my-zsh path
 export ZSH=/home/ben/.oh-my-zsh
+export ZSH_CUSTOM=$ZSH/custom
 
 # python-virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
