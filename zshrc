@@ -97,9 +97,9 @@ alias upgrade="sudo dnf upgrade"
 alias playbook="ansible-playbook"
 
 # Enable auto suggestion
-source ~/git/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Enable syntax highlighting
-source ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 autoload -Uz compinit
 compinit
