@@ -1,11 +1,7 @@
-# PATH
-export PATH=~/bin:~/.gem/ruby/2.6.0/bin:$PATH
 # Set default text editor
 export EDITOR=/usr/bin/vim
 
 # Plugins
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
   git
   git-extras
@@ -21,6 +17,9 @@ plugins=(
 # oh-my-zsh path
 export ZSH=/home/ben/.oh-my-zsh
 export ZSH_CUSTOM=$ZSH/custom
+
+# Ruby/Gem Config
+export GEM_HOME="$HOME/.gems"
 
 # python-virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -107,5 +106,8 @@ compinit
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
-
 source $ZSH/oh-my-zsh.sh
+
+# PATH
+export PATH=$GEM_HOME/bin:$HOME/bin:$PATH
+
