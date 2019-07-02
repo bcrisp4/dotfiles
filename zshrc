@@ -109,5 +109,5 @@ kitty + complete setup zsh | source /dev/stdin
 source $ZSH/oh-my-zsh.sh
 
 # PATH
-export PATH=$GEM_HOME/bin:$HOME/bin:$PATH
+export PATH=$GEM_HOME/bin:$HOME/bin:$HOME/.local/bin:$PATH
 
