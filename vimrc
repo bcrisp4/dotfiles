@@ -33,9 +33,6 @@ nmap <silent> <c-right> :wincmd l<CR>
 " Configure noted
 :let g:notes_directories = ['~/Notes']
 
-" True Color Support On
-set termguicolors
-
 " Use gruvbox dark color theme
 colorscheme gruvbox
 set background=dark
