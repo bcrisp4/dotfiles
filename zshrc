@@ -12,6 +12,7 @@ plugins=(
   history
   vagrant
   vagrant-prompt
+  terraform
 )
 
 # oh-my-zsh path
@@ -20,6 +21,9 @@ export ZSH_CUSTOM=$ZSH/custom
 
 # Ruby/Gem Config
 export GEM_HOME="$HOME/.gems"
+
+# Go Environment
+export GOPATH=$HOME/go
 
 # python-virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -109,5 +113,8 @@ kitty + complete setup zsh | source /dev/stdin
 source $ZSH/oh-my-zsh.sh
 
 # PATH
-export PATH=$GEM_HOME/bin:$HOME/bin:$HOME/.local/bin:$PATH
+export PATH=$GOPATH/bin:$GEM_HOME/bin:$HOME/bin:$HOME/.local/bin:$PATH
+
+# direnv hook
+eval "$(direnv hook zsh)"
 
