@@ -36,7 +36,7 @@ git:
 zsh: antigen base16-shell
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
 
-vim: vundle
+vim: vundle base16-shell
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
 	vim +PluginInstall +qall > /dev/null 2>&1
 
