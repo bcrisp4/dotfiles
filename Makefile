@@ -38,7 +38,7 @@ zsh: antigen base16-shell
 
 vim: vundle base16-shell
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
-	vim +PluginInstall +qall > /dev/null 2>&1
+	vim +PluginInstall +qall
 
 tmux:
 	ln -vsf ${PWD}/.tmux.conf ${HOME}/.tmux.conf
