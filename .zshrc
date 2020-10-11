@@ -67,4 +67,4 @@ export GEM_PATH="$GEM_HOME/bin"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-export PATH="$HOME/bin:$HOME/.local/bin:$GOBIN:$GEM_PATH:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$GOBIN:$GEM_PATH:/usr/sbin:$PATH"
