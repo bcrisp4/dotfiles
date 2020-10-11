@@ -6,6 +6,7 @@ source $PLUGIN_DIR/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
+antigen bundle apt
 antigen bundle aws
 antigen bundle colored-man-pages
 antigen bundle command-not-found
