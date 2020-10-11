@@ -59,6 +59,8 @@ alias c='clear'
 
 
 ### environment ###
+export EDITOR="vim"
+
 export GEM_HOME="$HOME/.gem"
 export GEM_PATH="$GEM_HOME/bin"
 
