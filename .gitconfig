@@ -5,3 +5,5 @@
   ui = true
 [pull]
 	rebase = false
+[cola]
+	spellcheck = true
