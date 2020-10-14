@@ -1,9 +1,11 @@
 .DEFAULT_GOAL := default
 
 PLUGIN_DIR = ${HOME}/.plugins
+FONTS_DIR = ${HOME}/.local/share/fonts
 ANTIGEN_REPO_SRC = "https://github.com/zsh-users/antigen.git"
 VUNDLE_REPO_SRC = "https://github.com/VundleVim/Vundle.vim.git"
 BASE16-SHELL_REPO_SRC = "https://github.com/chriskempson/base16-shell.git"
+NERD-FONTS_REPO_SRC = "https://github.com/ryanoasis/nerd-fonts.git"
 
 define install_from_git
 	 [ -d $(2) ] || git clone $(1) $(2)
@@ -30,6 +32,12 @@ base16-shell: plugin_dir
 		# Install the vundle vim plugin manager
 		$(call install_plugin,base16-shell,${BASE16-SHELL_REPO_SRC})
 
+fonts:
+	  # Ensure fonts dir exists
+	  mkdir -vp ${FONTS_DIR}
+	  # Download and extract patched FiraCode fonts
+		[ -f ${FONTS_DIR}/FiraCode.zip ] || wget -O ${FONTS_DIR}/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip 
+		unzip -oq ${FONTS_DIR}/FiraCode.zip
 git:
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 
