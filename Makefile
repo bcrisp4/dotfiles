@@ -5,6 +5,7 @@ FONTS_DIR = ${HOME}/.local/share/fonts
 ANTIGEN_REPO_SRC = "https://github.com/zsh-users/antigen.git"
 VUNDLE_REPO_SRC = "https://github.com/VundleVim/Vundle.vim.git"
 BASE16-SHELL_REPO_SRC = "https://github.com/chriskempson/base16-shell.git"
+FZF_REPO_SRC = "https://github.com/junegunn/fzf.git"
 NERD-FONTS_REPO_SRC = "https://github.com/ryanoasis/nerd-fonts.git"
 
 define install_from_git
@@ -31,6 +32,11 @@ vundle: plugin_dir
 base16-shell: plugin_dir
 		# Install the vundle vim plugin manager
 		$(call install_plugin,base16-shell,${BASE16-SHELL_REPO_SRC})
+
+fzf: plugin_dir
+	  ### install fzf ###
+	  $(call install_plugin,fzf,${FZF_REPO_SRC})
+	  ${PLUGIN_DIR}/fzf/install --no-update-rc --key-bindings --completion
 
 fonts:
 	  # Ensure fonts dir exists
