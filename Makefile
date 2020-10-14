@@ -18,19 +18,19 @@ define install_plugin
 endef
 
 plugin_dir:
-		# Ensure the plugins directory exists
+		### ensure the plugins directory exists ###
 		mkdir -vp ${PLUGIN_DIR}
 
 antigen: plugin_dir
-		# Install the antigen ZSH plugin manager
+		### install the antigen ZSH plugin manager ###
 		$(call install_plugin,antigen,${ANTIGEN_REPO_SRC})
 
 vundle: plugin_dir
-		# Install the vundle vim plugin manager
+		### install the vundle vim plugin manager ###
 		$(call install_plugin,vundle,${VUNDLE_REPO_SRC})
 
 base16-shell: plugin_dir
-		# Install the vundle vim plugin manager
+		### install the base16 shell theme ###
 		$(call install_plugin,base16-shell,${BASE16-SHELL_REPO_SRC})
 
 fzf: plugin_dir
@@ -50,16 +50,20 @@ p10k-prompt: antigen
 	ln -vsf ${PWD}/.p10k.zsh ${HOME}/.p10k.zsh
 
 git:
+	### configure git ###
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 
 zsh: antigen base16-shell
+	### configure zsh shell ###
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
 
 vim: vundle base16-shell
+	### configure vim ###
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
 	vim +PluginInstall +qall
 
 tmux:
+	### configure tmux ###
 	ln -vsf ${PWD}/.tmux.conf ${HOME}/.tmux.conf
 
 default: zsh vim tmux git
