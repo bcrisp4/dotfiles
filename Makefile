@@ -53,7 +53,7 @@ git:
 	### configure git ###
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 
-zsh: antigen base16-shell
+zsh: antigen base16-shell p10k-prompt
 	### configure zsh shell ###
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
 
