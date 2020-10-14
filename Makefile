@@ -39,9 +39,8 @@ fzf: plugin_dir
 	  ${PLUGIN_DIR}/fzf/install --no-update-rc --key-bindings --completion
 
 fonts:
-	  # Ensure fonts dir exists
+	  ### install fonts ###
 	  mkdir -vp ${FONTS_DIR}
-	  # Download and extract patched FiraCode fonts
 		[ -f ${FONTS_DIR}/FiraCode.zip ] || wget -O ${FONTS_DIR}/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip 
 		unzip -oq ${FONTS_DIR}/FiraCode.zip
 
