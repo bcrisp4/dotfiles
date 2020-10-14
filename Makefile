@@ -44,6 +44,11 @@ fonts:
 	  # Download and extract patched FiraCode fonts
 		[ -f ${FONTS_DIR}/FiraCode.zip ] || wget -O ${FONTS_DIR}/FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip 
 		unzip -oq ${FONTS_DIR}/FiraCode.zip
+
+p10k-prompt: antigen
+	### configure p10k zsh prompt ###
+	ln -vsf ${PWD}/.p10k.zsh ${HOME}/.p10k.zsh
+
 git:
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 
