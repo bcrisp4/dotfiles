@@ -79,6 +79,9 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 ### environment ###
+SECRET_FILE="$HOME/.secrets"
+[ -f $SECRET_FILE ] && source $SECRET_FILE
+
 export EDITOR="vim"
 
 export GEM_HOME="$HOME/.gem"
