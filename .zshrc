@@ -50,7 +50,7 @@ BASE16_SHELL="$PLUGIN_DIR/base16-shell/"
 
 ### fzf / fuzzy finder ###
 # https://github.com/junegunn/fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 
 ### aliases ###
