@@ -72,6 +72,12 @@ alias g='git'
 alias c='clear'
 
 
+### vte for tilix ###
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  vte_script="/etc/profile.d/vte.sh"
+  [ -f $vte_script ] && source $vte_script
+fi
+
 ### environment ###
 export EDITOR="vim"
 
