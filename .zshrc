@@ -84,10 +84,7 @@ SECRET_FILE="$HOME/.secrets"
 
 export EDITOR="vim"
 
-export GEM_HOME="$HOME/.gem"
-export GEM_PATH="$GEM_HOME/bin"
-
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-export PATH="$HOME/bin:$HOME/.local/bin:$GOBIN:$GEM_PATH:/usr/sbin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$GOBIN:/usr/sbin:$PATH"
