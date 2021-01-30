@@ -16,7 +16,6 @@ source $PLUGIN_DIR/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle apt
-antigen bundle aws
 antigen bundle colored-man-pages
 antigen bundle command-not-found
 antigen bundle docker
@@ -25,13 +24,9 @@ antigen bundle gitfast
 antigen bundle gitignore
 antigen bundle golang
 antigen bundle httpie
-antigen bundle nmap
-antigen bundle pep8
 antigen bundle pip
-antigen bundle salt
 antigen bundle terraform
 antigen bundle virtualenv
-antigen bundle vagrant
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
