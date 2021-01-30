@@ -35,6 +35,11 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 
 
+### zsh config
+# dont share history between sessions
+unsetopt share_history
+
+
 ### base16 shell theme ###
 # https://github.com/chriskempson/base16-shell
 BASE16_SHELL="$PLUGIN_DIR/base16-shell/"
